@@ -1,15 +1,24 @@
 package dk.via.pro3_assignment_restapi.model;
 
+import jakarta.persistence.*;
+
 import java.time.LocalDate;
 
+@Entity
+@Table(name = "animal")
 public class Animal
 {
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
   private long regNum;
+
   private double weight;
   private LocalDate date;
   private String origin;
 
-  public Animal() {}
+  public Animal()
+  {
+  }
 
   public Animal(long regNum, double weight, LocalDate date, String origin)
   {

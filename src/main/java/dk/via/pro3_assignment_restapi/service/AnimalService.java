@@ -21,7 +21,7 @@ public class AnimalService
         return animals;
     }
 
-    public Animal getAnimalsById(int id){
+    public Animal getAnimalsById(long id){
        // List<Animal> animals = animalRepository.findAll();
     //return animals.stream().filter(animal -> animal.getRegNum() == id).findFirst().orElse(null);
    return animalRepository.findById(id).get();
@@ -33,7 +33,7 @@ public class AnimalService
  }
 
     public  List<Animal>  getAnimalsByOrigin(String origin){
-        return animalRepository.findByOrigin(origin);
+        return animalRepository.findByOriginIgnoreCase(origin);
     }
 
 }
