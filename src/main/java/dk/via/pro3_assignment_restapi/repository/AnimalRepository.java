@@ -21,22 +21,31 @@ public class AnimalRepository implements IAnimalRepository
   }
 
   @Override public Optional<Animal> findById(int id)
-  {
-    return Optional.empty();
+  {return animals.values()
+      .stream()
+      .filter(a -> a.getRegNum() == id)
+      .findFirst();
+
   }
 
   @Override public List<Animal> findByDate(LocalDate date)
-  {
-    return List.of();
+  {return animals.values()
+      .stream()
+      .filter(a -> a.getDate().equals(date))
+      .toList();
+
   }
 
   @Override public List<Animal> findByOrigin(String origin)
-  {
-    return List.of();
+  {return animals.values()
+      .stream()
+      .filter(a -> a.getOrigin().equalsIgnoreCase(origin))
+      .toList();
+
   }
 
   @Override public List<Animal> findAll()
-  {
-    return List.of();
+  {return animals.values().stream().toList();
+
   }
 }
