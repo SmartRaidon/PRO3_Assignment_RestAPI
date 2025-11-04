@@ -12,13 +12,14 @@ public class Animal
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private long regNum;
 
+  @Column(name = "weight")
   private double weight;
+  @Column(name = "date", nullable = false)
   private LocalDate date;
+  @Column(name = "origin", nullable = false)
   private String origin;
 
-  public Animal()
-  {
-  }
+  public Animal() {}
 
   public Animal(long regNum, double weight, LocalDate date, String origin)
   {

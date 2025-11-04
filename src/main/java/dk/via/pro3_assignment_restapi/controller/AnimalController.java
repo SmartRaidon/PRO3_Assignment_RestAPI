@@ -3,6 +3,7 @@ package dk.via.pro3_assignment_restapi.controller;
 import dk.via.pro3_assignment_restapi.model.Animal;
 import dk.via.pro3_assignment_restapi.service.AnimalService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Profile;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -21,6 +22,7 @@ public class AnimalController
   @PostMapping
   public Animal registerAnimal(@RequestBody Animal animal)
   {
+      System.out.println(animal.getRegNum());
     return service.register(animal);
   }
 

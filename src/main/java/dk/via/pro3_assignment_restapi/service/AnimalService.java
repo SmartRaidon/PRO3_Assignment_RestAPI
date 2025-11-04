@@ -1,7 +1,7 @@
 package dk.via.pro3_assignment_restapi.service;
 
 import dk.via.pro3_assignment_restapi.model.Animal;
-import dk.via.pro3_assignment_restapi.repository.IAnimalRepository;
+import dk.via.pro3_assignment_restapi.repository.AnimalRepository;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
@@ -10,7 +10,12 @@ import java.util.List;
 @Service
 public class AnimalService
 {
-    private IAnimalRepository animalRepository;
+    private AnimalRepository animalRepository;
+
+    public AnimalService(AnimalRepository animalRepository)
+    {
+        this.animalRepository = animalRepository;
+    }
 
     public Animal register(Animal animal){
         animalRepository.save(animal);
