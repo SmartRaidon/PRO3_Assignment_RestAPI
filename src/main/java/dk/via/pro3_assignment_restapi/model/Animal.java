@@ -4,14 +4,14 @@ import java.time.LocalDate;
 
 public class Animal
 {
-  private int regNum;
+  private long regNum;
   private double weight;
   private LocalDate date;
   private String origin;
 
   public Animal() {}
 
-  public Animal(int regNum, double weight, LocalDate date, String origin)
+  public Animal(long regNum, double weight, LocalDate date, String origin)
   {
     this.regNum = regNum;
     this.weight = weight;
@@ -19,12 +19,12 @@ public class Animal
     this.origin = origin;
   }
 
-  public int getRegNum()
+  public long getRegNum()
   {
     return regNum;
   }
 
-  public void setRegNum(int regNum)
+  public void setRegNum(long regNum)
   {
     this.regNum = regNum;
   }
