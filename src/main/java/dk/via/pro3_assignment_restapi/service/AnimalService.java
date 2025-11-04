@@ -32,4 +32,8 @@ public class AnimalService
     return animalRepository.findByDate(newDate);
  }
 
+    public  List<Animal>  getAnimalsByOrigin(String origin){
+        return animalRepository.findByOrigin(origin);
+    }
+
 }
