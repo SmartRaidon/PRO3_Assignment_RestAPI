@@ -1,4 +1,4 @@
-package dk.via.pro3_assignment_restapi.config;
+/*package dk.via.pro3_assignment_restapi.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -19,4 +19,4 @@ public class SecurityConfig {
                 .formLogin(form -> form.disable());        // disable default login page
         return http.build();
     }
-}
+}*/
